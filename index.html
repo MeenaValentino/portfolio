@@ -6,13 +6,17 @@
     <title>Meena Kyra Valentino | Portfolio & PKS</title>
     <style>
         :root {
-            --bg-color: #0f172a;
-            --card-bg: #1e293b;
-            --text-main: #f8fafc;
-            --text-muted: #94a3b8;
-            --accent: #6366f1;
-            --accent-hover: #4f46e5;
-            --border-color: #334155;
+            /* Aesthetically Pleasing, Soft Palette */
+            --bg-color: #fffafb; /* Soft Cream Blush */
+            --card-bg: #ffffff; /* Pure white cloud */
+            --text-main: #374151; /* Elegant Charcoal (Better than pure black) */
+            --text-muted: #6b7280; /* Soft Grey */
+            --accent-soft: #fdf2f8; /* Very Pale Pink highlight */
+            --accent-main: #db2777; /* Rose Pink for links/headers */
+            --border-soft: #fce7f3; /* Ultra-light pink border */
+            --tag-bg: #fff1f2; /* Soft Rose tag */
+            --shadow-soft: 0 4px 6px -1px rgba(244, 114, 182, 0.05), 0 2px 4px -1px rgba(244, 114, 182, 0.03);
+            --shadow-focus: 0 10px 15px -3px rgba(244, 114, 182, 0.1), 0 4px 6px -2px rgba(244, 114, 182, 0.05);
         }
 
         * {
@@ -22,118 +26,214 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
             background-color: var(--bg-color);
             color: var(--text-main);
-            line-height: 1.6;
+            line-height: 1.7;
             padding: 20px;
         }
 
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
             padding: 20px 0;
         }
 
-        /* Header Style */
+        /* Simple, Pleasing Header */
         header {
             text-align: center;
-            padding: 40px 20px;
+            padding: 50px 20px;
             background: var(--card-bg);
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            border-radius: 20px; /* Softer, bigger radius */
+            box-shadow: var(--shadow-soft);
             margin-bottom: 30px;
+            border: 1px solid var(--border-soft);
         }
 
         header h1 {
-            font-size: 2.2rem;
+            font-size: 2.5rem;
             color: var(--text-main);
             margin-bottom: 8px;
+            font-weight: 800;
         }
 
         header p {
-            color: var(--text-muted);
-            font-size: 1.1rem;
+            color: var(--accent-main);
+            font-size: 1.2rem;
+            font-weight: 500;
+            margin-bottom: 15px;
         }
 
         .meta-info {
-            margin-top: 15px;
-            font-size: 0.9rem;
-            color: var(--accent);
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            background: var(--accent-soft);
+            display: inline-block;
+            padding: 6px 15px;
+            border-radius: 20px;
         }
 
-        /* Section Layouts */
+        /* Aesthetics Simple Sections */
         section {
             background: var(--card-bg);
-            padding: 30px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
+            padding: 35px;
+            border-radius: 20px;
+            box-shadow: var(--shadow-soft);
             margin-bottom: 30px;
+            border: 1px solid var(--border-soft);
         }
 
         h2 {
-            font-size: 1.5rem;
+            font-size: 1.7rem;
             color: var(--text-main);
-            border-bottom: 2px solid var(--border-color);
-            padding-bottom: 8px;
-            margin-bottom: 20px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
+            margin-bottom: 25px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h2::after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 3px;
+            bottom: -5px;
+            left: 0;
+            background-color: var(--border-soft);
+            border-radius: 2px;
         }
 
-        /* Grid for Skills & Projects */
+        h3 {
+            color: var(--text-main);
+            margin-bottom: 12px;
+            font-size: 1.25rem;
+            font-weight: 700;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 15px;
+        }
+
+        /* Elegant Grid */
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
         }
 
         .card {
-            background: rgba(255, 255, 255, 0.03);
-            padding: 20px;
-            border-radius: 8px;
-            border: 1px solid var(--border-color);
+            background: var(--bg-color);
+            padding: 25px;
+            border-radius: 15px;
+            border: 1px solid var(--border-soft);
+            margin-bottom: 15px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-3px);
+            box-shadow: var(--shadow-focus);
         }
 
-        .card h3 {
-            color: var(--accent);
+        /* Aesthetic Skill Pills */
+        .skills-container h4 {
+            font-size: 0.95rem;
+            color: var(--accent-main);
             margin-bottom: 10px;
-            font-size: 1.1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
         }
 
+        .tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .tag {
+            background: var(--card-bg);
+            border: 1px solid var(--border-soft);
+            color: var(--text-main);
+            padding: 5px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+
+        /* Clean List Items */
         ul {
             list-style-type: none;
         }
 
         li {
-            margin-bottom: 8px;
+            margin-bottom: 10px;
             color: var(--text-muted);
+            font-size: 0.95rem;
+            display: flex;
+            align-items: flex-start;
         }
 
-        .skill-list li {
-            background: #273549;
+        .bullet-list li::before {
+            content: "💖"; /* Softer, girly bullet point */
+            font-size: 0.8rem;
+            margin-right: 10px;
+            margin-top: 3px;
+        }
+
+        /* Experience Specifics */
+        .job-title {
+            font-weight: 700;
             color: var(--text-main);
-            display: inline-block;
-            padding: 4px 10px;
-            border-radius: 4px;
-            font-size: 0.85rem;
-            margin: 4px;
+            font-size: 1.15rem;
         }
 
-        /* Interactive Notebook Accordion Layout */
-        details {
-            background: rgba(255, 255, 255, 0.02);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
+        .job-meta {
+            font-size: 0.9rem;
+            color: var(--accent-main);
+            font-weight: 500;
             margin-bottom: 12px;
-            padding: 15px;
+        }
+
+        /* Pleasing Contact Section */
+        .contact-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+            margin-top: 20px;
+        }
+
+        .contact-links a {
+            color: var(--accent-main);
+            text-decoration: none;
+            font-weight: 600;
+            padding: 8px 18px;
+            background: var(--accent-soft);
+            border-radius: 20px;
+            transition: background 0.2s ease;
+        }
+
+        .contact-links a:hover {
+            background: var(--border-soft);
+        }
+
+        /* "Aesthetically Pleasing" PKS System */
+        #pks-section {
+            background: #fff5f7; /* Very light alternative section color */
+        }
+
+        details {
+            background: var(--card-bg);
+            border-radius: 12px;
+            margin-bottom: 15px;
+            padding: 18px;
             transition: all 0.3s ease;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.02);
         }
 
         details[open] {
-            background: rgba(255, 255, 255, 0.05);
-            border-color: var(--accent);
+            box-shadow: var(--shadow-focus);
+            background: #fffafb;
         }
 
         summary {
@@ -142,21 +242,28 @@
             cursor: pointer;
             outline: none;
             user-select: none;
+            position: relative;
+            padding-right: 30px;
+        }
+
+        /* Custom stylish marker */
+        summary::marker {
+            color: var(--accent-main);
         }
 
         .note-content {
-            margin-top: 15px;
-            padding-top: 15px;
-            border-top: 1px solid var(--border-color);
+            margin-top: 18px;
+            padding-top: 18px;
+            border-top: 2px solid var(--border-soft);
             color: var(--text-muted);
             font-size: 0.95rem;
-            white-space: pre-wrap; /* Keeps markdown structural spacing clean */
+            white-space: pre-wrap;
         }
 
         .note-content h3 {
-            color: var(--text-main);
-            margin: 15px 0 5px 0;
-            font-size: 1.05rem;
+            color: var(--accent-main);
+            font-size: 1.1rem;
+            margin-top: 15px;
         }
     </style>
 </head>
@@ -166,64 +273,134 @@
 
         <header>
             <h1>Meena Kyra C. Valentino</h1>
-            <p>Information Technology Portfolio & Digital Knowledge Hub</p>
+            <p>Information Technology Student & Frontend Developer</p>
             <div class="meta-info">
-                New Era University • Expected Graduation: July 2026 • Metro Manila, Philippines
+                New Era University • July 2026 • Metro Manila, Philippines
             </div>
         </header>
 
         <section>
-            <h2>📋 Professional Profile</h2>
-            <p style="color: var(--text-muted); margin-bottom: 20px;">
-                Senior Information Technology student specializing in frontend web application development, cross-platform mobile frameworks, and interactive software deployments. Experienced with repository environment structures, collaboration tooling, and digital system organizations.
+            <h2>💖 About Me</h2>
+            <p>
+                👋 Hi there! I'm Meena. I’m a passionate BS Information Technology student at New Era University, with a strong interest in software development, UI/UX design, and database management. I love solving real-world problems with clean, efficient code and continuously explore tools that help build impactful digital solutions.
             </p>
-            
+            <p>
+                As a developer, I have a solid foundation in programming and design, and I am adaptable and collaborative in team environments. Seeking to contribute effectively to the team and enhance both my technical and professional abilities.
+            </p>
+        </section>
+
+        <section>
+            <h2>🛠️ Technical Profile</h2>
             <div class="grid">
-                <div class="card">
-                    <h3>🛠️ Core Technical Skills</h3>
-                    <div class="skill-list">
-                        <li>React</li>
-                        <li>TypeScript</li>
-                        <li>Mantine UI</li>
-                        <li>Flutter</li>
-                        <li>Firebase</li>
-                        <li>ESP32 Systems</li>
-                        <li>Git / GitHub</li>
-                        <li>Cybersecurity Basics</li>
+                <div>
+                    <h3>Skills & Toolsets</h3>
+                    
+                    <div class="skills-container">
+                        <h4>Programming</h4>
+                        <div class="tags">
+                            <span class="tag">Java</span><span class="tag">Python</span><span class="tag">Kotlin</span>
+                            <span class="tag">Dart</span><span class="tag">PHP</span><span class="tag">SQL</span><span class="tag">TypeScript</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-container">
+                        <h4>Frameworks & Tools</h4>
+                        <div class="tags">
+                            <span class="tag">React</span><span class="tag">Mantine UI</span><span class="tag">Flutter</span>
+                            <span class="tag">Git</span><span class="tag">Laragon</span><span class="tag">XAMPP</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-container">
+                        <h4>Databases & Cloud</h4>
+                        <div class="tags">
+                            <span class="tag">MySQL</span><span class="tag">Firebase</span>
+                            <span class="tag">IBM Db2</span><span class="tag">MongoDB</span>
+                            <span class="tag">Oracle Cloud</span><span class="tag">Supabase</span>
+                        </div>
+                    </div>
+
+                    <div class="skills-container">
+                        <h4>Design & Reporting</h4>
+                        <div class="tags">
+                            <span class="tag">Figma</span><span class="tag">Canva</span>
+                            <span class="tag">Lucidchart</span><span class="tag">Jaspersoft Studio</span>
+                        </div>
                     </div>
                 </div>
-                <div class="card">
-                    <h3>💼 Technical Experience</h3>
-                    <p style="font-size: 0.9rem; font-weight: bold; color: var(--text-main);">Frontend Developer Intern</p>
-                    <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 5px;">Simplevia Technologies Inc. (Oct - Dec 2025)</p>
-                    <li style="font-size: 0.85rem;">• Designed data dashboards and profile management templates using React and Mantine UI.</li>
-                    <li style="font-size: 0.85rem;">• Managed team branches, codebase version syncing, and code merges under project lead guidelines.</li>
+
+                <div>
+                    <h3>Education</h3>
+                    <div class="card" style="background: transparent; padding: 10px 0; border: none; box-shadow: none;">
+                        <p class="job-title" style="margin-bottom: 2px;">Bachelor of Science in Information Technology</p>
+                        <p style="color: var(--text-main); margin-bottom: 2px;">New Era University</p>
+                        <p class="job-meta">Expected Graduation: July 2026</p>
+                        <p style="font-size: 0.9rem;">
+                            Relevant Coursework: Advanced Programming, Database Management, UI/UX (Figma), Data Analytics, Cloud Computing.
+                        </p>
+                    </div>
+
+                    <h3>Achievements</h3>
+                    <ul class="bullet-list">
+                        <li>Oracle Cloud Infrastructure – Foundations (2023)</li>
+                        <li>Oracle Cloud Data Management – Foundations (2023)</li>
+                        <li>Oracle AI – Foundations Associate (2023)</li>
+                        <li>IBM SkillsBuild: SQL & Relational Databases</li>
+                        <li>IBM SkillsBuild: NoSQL & DBaaS</li>
+                        <li>Ethical Hacker Certification</li>
+                    </ul>
                 </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>💼 Professional Experience</h2>
+            <div class="card">
+                <p class="job-title" style="margin-bottom: 2px;">Frontend Developer Intern</p>
+                <p style="color: var(--text-main); margin-bottom: 2px;">Simplevia Technologies Inc.</p>
+                <p class="job-meta">Oct 2025 – Dec 2025 & Feb 2026 – Apr 2026 | 500 Hours Total</p>
+                <ul class="bullet-list">
+                    <li>Developed web applications using React, TypeScript, and Mantine UI, ensuring modern UI component implementation.</li>
+                    <li>Designed interactive modals and complex forms for the Loan Profile System to streamline data entry.</li>
+                    <li>Enhanced overall system performance through frontend responsiveness optimizations.</li>
+                    <li>Mastered professional Git workflows, managing code versions within a development team.</li>
+                    <li>Navigated the full Software Development Life Cycle (SDLC) from design implementation to maintenance.</li>
+                </ul>
             </div>
         </section>
 
         <section>
             <h2>📱 Engineering Projects</h2>
-            <div class="grid">
-                <div class="card">
-                    <h3>KwentoPinoy Mobile Application</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">
-                        A cross-platform mobile application built using Flutter and Firebase designed to save, catalog, and share traditional Filipino legends. Integrated structural features including dynamic quiz modules and reading state trackers.
-                    </p>
-                </div>
-                <div class="card">
-                    <h3>Automated Smart Greenhouse</h3>
-                    <p style="font-size: 0.9rem; color: var(--text-muted);">
-                        An automated hardware system diorama running on an ESP32 microprocessor. Used integrated DHT11 environmental sensors and physical servo-mechanisms to track, log, and regulate local ambient conditions.
-                    </p>
-                </div>
+            
+            <div class="card">
+                <p class="job-title" style="margin-bottom: 2px;">KwentoPinoy App (Capstone Project)</p>
+                <p class="job-meta">April 2025 – Present | Flutter + Firebase</p>
+                <p style="font-size: 0.95rem;">
+                    Developing a mobile application built to save,atalog, and share traditional Filipino legends. Integrated Firestore and Supabase for real-time updates and user progress tracking.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="job-title" style="margin-bottom: 2px;">Paw Park Website</p>
+                <p class="job-meta">2023 | PHP + MySQL</p>
+                <p style="font-size: 0.95rem;">
+                    Built a full-stack pet park visitor management system featuring user authentication, CRUD operations, administrative control, andprintable visit reports.
+                </p>
+            </div>
+
+            <div class="card">
+                <p class="job-title" style="margin-bottom: 2px;">Bus Buddy (UI Prototype)</p>
+                <p class="job-meta">2024 | Figma Design</p>
+                <p style="font-size: 0.95rem;">
+                    Engineered a comprehensive transport booking system prototype inside Figma, prioritizing responsive layout modeling and realistic user journey flow analysis.
+                </p>
             </div>
         </section>
 
-        <section>
+        <section id="pks-section">
             <h2>📚 IT Elective 6: Cybersecurity Knowledge System (PKS)</h2>
-            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">
-                This interactive knowledge system holds my technical study records, framework documentation, and analysis logs. Click on any topic banner below to slide open and view the localized lecture summaries.
+            <p style="margin-bottom: 25px;">
+                This interactive catalog holds my structured technical study records, framework analysis logs, and local documentation for cybersecurity concepts. Click on any topic pathway below to slide open and view the expanded notebook entries.
             </p>
 
             <details>
@@ -334,7 +511,15 @@ Mapping current organizational career tracks within enterprise information secur
 * **Red Teaming:** Offensive penetration tests, exploitation modeling, and vulnerability validation.
                 </div>
             </details>
+        </section>
 
+        <section style="text-align: center; padding: 50px 20px; margin-bottom: 0;">
+            <h2>✨ Reach Out!</h2>
+            <p>I am always open to discussing new engineering ideas, structural project collaborations, or tech development opportunities!</p>
+            <div class="contact-links" style="justify-content: center;">
+                <a href="mailto:valentinomeena@gmail.com">📧 valentinomeena@gmail.com</a>
+                <a href="https://github.com/meenavalentino" target="_blank">👩‍💻 github.com/meenavalentino</a>
+            </div>
         </section>
 
     </div>
