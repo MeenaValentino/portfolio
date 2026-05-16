@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meena Kyra Valentino | Portfolio & PKS</title>
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-main: #f8fafc;
+            --text-muted: #94a3b8;
+            --accent: #6366f1;
+            --accent-hover: #4f46e5;
+            --border-color: #334155;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+
+        /* Header Style */
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background: var(--card-bg);
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            color: var(--text-main);
+            margin-bottom: 8px;
+        }
+
+        header p {
+            color: var(--text-muted);
+            font-size: 1.1rem;
+        }
+
+        .meta-info {
+            margin-top: 15px;
+            font-size: 0.9rem;
+            color: var(--accent);
+        }
+
+        /* Section Layouts */
+        section {
+            background: var(--card-bg);
+            padding: 30px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: var(--text-main);
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 8px;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        /* Grid for Skills & Projects */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: rgba(255, 255, 255, 0.03);
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        .card h3 {
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        ul {
+            list-style-type: none;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: var(--text-muted);
+        }
+
+        .skill-list li {
+            background: #273549;
+            color: var(--text-main);
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 4px;
+            font-size: 0.85rem;
+            margin: 4px;
+        }
+
+        /* Interactive Notebook Accordion Layout */
+        details {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 12px;
+            padding: 15px;
+            transition: all 0.3s ease;
+        }
+
+        details[open] {
+            background: rgba(255, 255, 255, 0.05);
+            border-color: var(--accent);
+        }
+
+        summary {
+            font-weight: 600;
+            color: var(--text-main);
+            cursor: pointer;
+            outline: none;
+            user-select: none;
+        }
+
+        .note-content {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid var(--border-color);
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            white-space: pre-wrap; /* Keeps markdown structural spacing clean */
+        }
+
+        .note-content h3 {
+            color: var(--text-main);
+            margin: 15px 0 5px 0;
+            font-size: 1.05rem;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <h1>Meena Kyra C. Valentino</h1>
+            <p>Information Technology Portfolio & Digital Knowledge Hub</p>
+            <div class="meta-info">
+                New Era University • Expected Graduation: July 2026 • Metro Manila, Philippines
+            </div>
+        </header>
+
+        <section>
+            <h2>📋 Professional Profile</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px;">
+                Senior Information Technology student specializing in frontend web application development, cross-platform mobile frameworks, and interactive software deployments. Experienced with repository environment structures, collaboration tooling, and digital system organizations.
+            </p>
+            
+            <div class="grid">
+                <div class="card">
+                    <h3>🛠️ Core Technical Skills</h3>
+                    <div class="skill-list">
+                        <li>React</li>
+                        <li>TypeScript</li>
+                        <li>Mantine UI</li>
+                        <li>Flutter</li>
+                        <li>Firebase</li>
+                        <li>ESP32 Systems</li>
+                        <li>Git / GitHub</li>
+                        <li>Cybersecurity Basics</li>
+                    </div>
+                </div>
+                <div class="card">
+                    <h3>💼 Technical Experience</h3>
+                    <p style="font-size: 0.9rem; font-weight: bold; color: var(--text-main);">Frontend Developer Intern</p>
+                    <p style="font-size: 0.85rem; color: var(--accent); margin-bottom: 5px;">Simplevia Technologies Inc. (Oct - Dec 2025)</p>
+                    <li style="font-size: 0.85rem;">• Designed data dashboards and profile management templates using React and Mantine UI.</li>
+                    <li style="font-size: 0.85rem;">• Managed team branches, codebase version syncing, and code merges under project lead guidelines.</li>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📱 Engineering Projects</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>KwentoPinoy Mobile Application</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        A cross-platform mobile application built using Flutter and Firebase designed to save, catalog, and share traditional Filipino legends. Integrated structural features including dynamic quiz modules and reading state trackers.
+                    </p>
+                </div>
+                <div class="card">
+                    <h3>Automated Smart Greenhouse</h3>
+                    <p style="font-size: 0.9rem; color: var(--text-muted);">
+                        An automated hardware system diorama running on an ESP32 microprocessor. Used integrated DHT11 environmental sensors and physical servo-mechanisms to track, log, and regulate local ambient conditions.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>📚 IT Elective 6: Cybersecurity Knowledge System (PKS)</h2>
+            <p style="color: var(--text-muted); margin-bottom: 20px; font-size: 0.95rem;">
+                This interactive knowledge system holds my technical study records, framework documentation, and analysis logs. Click on any topic banner below to slide open and view the localized lecture summaries.
+            </p>
+
+            <details>
+                <summary>🔐 Topic 1: Introduction to Security Models and Threat Frameworks</summary>
+                <div class="note-content">
+### Security Fundamentals Overview
+Understanding defensive protection states requires analyzing standard threat infrastructure frameworks and systemic structural defenses.
+
+### Core Architecture Notes
+* **Confidentiality:** Ensuring asset visibility is completely restricted to authorized accounts.
+* **Integrity:** Securing systems against unverified data adjustments or configuration alterations.
+* **Availability:** Guaranteeing reliable network endpoints remain open and ready to process requests.
+                </div>
+            </details>
+
+            <details>
+                <summary>🎣 Topic 2: Initial Access (TA0001) - Phishing [T1566]</summary>
+                <div class="note-content">
+### Attack Description
+Adversaries use fraudulent electronic messages to trick target users into executing malicious code or giving up sensitive credentials.
+
+### Technical Analysis
+* **Delivery Systems:** Embedded web attachments, custom malicious payloads, and targeted link redirections.
+* **Mitigation Strategy:** Implement strict multi-factor verification states, automated attachment link filtering, and validation tracking layers.
+                </div>
+            </details>
+
+            <details>
+                <summary>🪝 Topic 3: The Adversarial Hook</summary>
+                <div class="note-content">
+### Behavioral Exploit Concepts
+Analyzing the technical and emotional triggers used by threat groups during social engineering operations to bypass standard logical user caution.
+
+### Strategic Observations
+* **Psychological Mechanics:** Urgent communication styling, spoofed security alerts, and authority emulation.
+* **Defense Paradigms:** Zero-Trust account tracking and rigorous authentication confirmation loops.
+                </div>
+            </details>
+
+            <details>
+                <summary>🔑 Topic 4: Initial Access (TA0001) - Valid Accounts [T1078]</summary>
+                <div class="note-content">
+### Attack Description
+Adversaries compromise and reuse existing real account details to sneak past network perimeter borders without triggering anomalies.
+
+### Technical Mitigation
+* Implement automated credential expiration cycles.
+* Track concurrent profile logging locations for unusual access patterns.
+                </div>
+            </details>
+
+            <details>
+                <summary>🌐 Topic 5: Initial Access (TA0001) - Exploit Public-Facing Application [T1190]</summary>
+                <div class="note-content">
+### Attack Description
+Using software vulnerabilities or unpatched infrastructure fields in internet-accessible software to run unauthorized remote commands.
+
+### Technical Mitigation
+* Maintain aggressive software update logs.
+* Sanitize application data fields to stop unexpected code injection.
+                </div>
+            </details>
+
+            <details>
+                <summary>💻 Topic 6: Execution (TA0002) - Command and Scripting Interpreter [T1059]</summary>
+                <div class="note-content">
+### Attack Description
+Threat groups exploit native terminal environments (like PowerShell, CMD, or Bash) to run custom scripts and control systems locally.
+
+### Technical Mitigation
+* Enforce strict execution policies on local user scripts.
+* Enable comprehensive script-block auditing logs.
+                </div>
+            </details>
+
+            <details>
+                <summary>⏳ Topic 7: Persistence (TA0003)</summary>
+                <div class="note-content">
+### Attack Description
+Techniques used by malicious actors to keep their access live inside a target system even after reboots, account changes, or regular service closures.
+
+### Technical Mitigation
+* Audit background startup registry paths.
+* Lock down root system administrative permissions.
+                </div>
+            </details>
+
+            <details>
+                <summary>🔍 Topic 8: Discovery (TA0007)</summary>
+                <div class="note-content">
+### Attack Description
+Internal recon methods where adversaries survey local system directories, network paths, and profile names to outline their surroundings.
+
+### Technical Mitigation
+* Block cross-directory network sniffing tools.
+* Restrict basic account permission visibility over wider internal environments.
+                </div>
+            </details>
+
+            <details>
+                <summary>🚀 Topic 9: Career Opportunities in IT Security</summary>
+                <div class="note-content">
+### Industry Landscapes
+Mapping current organizational career tracks within enterprise information security spaces.
+
+### Target Focus Roles
+* **Blue Teaming:** Defensive engineering, security auditing, log monitoring, and system design.
+* **Red Teaming:** Offensive penetration tests, exploitation modeling, and vulnerability validation.
+                </div>
+            </details>
+
+        </section>
+
+    </div>
+
+</body>
+</html>
